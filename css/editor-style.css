@@ -1,42 +1,51 @@
 /*
-Theme Name: Twenty Fifteen
-Description: Used to style the TinyMCE editor.
+    Theme Name: Pressly
+    Description: Used to style the TinyMCE editor.
 */
 
+/* =Theme base
+-------------------------------------------------------------- */
 
-/**
- * Table of Contents:
- *
- * 1.0 - Body
- * 2.0 - Typography
- * 3.0 - Elements
- * 4.0 - Alignment
- * 5.0 - Caption
- * 6.0 - Galleries
- * 7.0 - Audio / Video
- * 8.0 - RTL
- */
-
-
-/**
- * 1.0 Body
- */
-
-body {
-	color: #333;
-	font-family: "Noto Serif", serif;
-	font-weight: 400;
-	font-size: 17px;
-	line-height: 1.6471;
-	margin: 20px 40px;
-	max-width: 660px;
-	vertical-align: baseline;
+html .mceContentBody {
+	max-width: 720px;
 }
 
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #959595;
+}
 
-/**
- * 2.0 Typography
- */
+/* =05. Text-level semantics
+-------------------------------------------------------------- */
+
+cite {
+    display: block;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+blockquote {
+    border-bottom: 1px solid rgba(0, 0, 0 ,0.1);
+    border-top: 1px solid rgba(0, 0, 0 ,0.1);
+    font-family: 'Alegreya', Georgia, Time New Roman, serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+blockquote:before{
+    content: '\201C';
+    font-size: 72px;
+    float: left;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+/* =Headings
+-------------------------------------------------------------- */
 
 h1,
 h2,
@@ -44,434 +53,251 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
-	font-weight: 700;
-	margin: 56px 0 28px;
+    color: #121212;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+    color: #121212;
 }
 
 h1 {
-	font-size: 35px;
-	line-height: 1.2308;
+    font-size: 28px;
 }
 
 h2 {
-	font-size: 29px;
-	line-height: 1.2069;
+    font-size: 21px;
 }
 
 h3 {
-	font-size: 24px;
-	line-height: 1.1667;
+    font-size: 18px;
 }
 
 h4 {
-	font-size: 20px;
-	line-height: 1.4;
+    font-size: 16px;
 }
 
-h5,
+h5 {
+    font-size: 14px;
+}
+
 h6 {
-	font-size: 17px;
-	letter-spacing: 0.1em;
-	line-height: 1.2353;
-	text-transform: uppercase;
+    font-size: 14px;
 }
 
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-	margin-top: 0;
-}
+/* =Links
+-------------------------------------------------------------- */
 
-p {
-	margin: 0 0 28px;
-}
-
-b,
-strong {
-	font-weight: 700;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	border-left: 4px solid #707070;
-	color: #707070;
-	font-size: 20px;
-	font-style: italic;
-	line-height: 1.8182;
-	margin: 0 0 35px -21px;
-	padding-left: 17px;
-}
-
-blockquote > blockquote {
-	margin-left: 0;
-}
-
-blockquote p {
-	margin-bottom: 35px;
-}
-
-blockquote > p:last-child {
-	margin-bottom: 0;
-}
-
-blockquote cite,
-blockquote small {
-	color: #333;
-	font-family: "Noto Sans", sans-serif;
-	font-size: 17px;
-	line-height: 1.6471;
-}
-
-blockquote em,
-blockquote i,
-blockquote cite {
-	font-style: normal;
-}
-
-blockquote strong,
-blockquote b {
-	font-weight: 400;
-}
-
-address {
-	font-style: italic;
-	margin: 0 0 28px;
-}
-
-code,
-kbd,
-tt,
-var,
-samp,
-pre {
-	font-family: Inconsolata, monospace;
-}
-
-pre {
-	background-color: #fcfcfc;
-	border: 1px solid #eaeaea;
-	font-size: 17px;
-	line-height: 1.2353;
-	margin-bottom: 28px;
-	max-width: 100%;
-	overflow: auto;
-	padding: 14px;
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted #eaeaea;
-	cursor: help;
-}
-
-mark,
-ins {
-	background-color: #fff9c0;
+a {
+	color: #199cd8;
 	text-decoration: none;
 }
 
-sup,
-sub {
-	font-size: 75%;
-	height: 0;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+a:hover,
+a:focus,
+a:active {
+	color: #adacac;
 }
 
-sup {
-	bottom: 1ex;
-}
+/* =Tables
+-------------------------------------------------------------- */
 
-sub {
-	top: .5ex;
-}
-
-small {
-	font-size: 75%;
-}
-
-big {
-	font-size: 125%;
-}
-
-
-/**
- * 3.0 Elements
- */
-
-hr {
-	background-color: #eaeaea;
-	border: 0;
-	height: 1px;
-	margin-bottom: 28px;
-}
-
-ul,
-ol {
-	margin: 0 0 28px 0;
-	padding: 0;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin: 0 0 0 23px;
-}
-
-dl {
-	margin: 0 0 28px;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 0 28px;
-}
-
-table,
-th,
-td,
-.mce-item-table,
-.mce-item-table th,
-.mce-item-table td {
-	border: 1px solid #eaeaea;
-}
-
-table a {
-	color: #333;
-}
-
-table,
-.mce-item-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	border-width: 1px 0 0 1px;
-	margin: 0 0 28px;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 	width: 100%;
 }
 
-table th,
-.mce-item-table th,
-table caption {
-	border-width: 0 1px 1px 0;
-	font-family: "Noto Serif", serif;
-	font-size: 17px;
-	font-weight: 700;
-	padding: 7px;
+td,
+th {
+    padding: 4px 0;
 	text-align: left;
-	vertical-align: baseline;
 }
 
-table td,
-.mce-item-table td {
-	border-width: 0 1px 1px 0;
-	font-family: "Noto Serif", serif;
-	font-size: 17px;
-	padding: 7px;
-	vertical-align: baseline;
+th {
+	font-weight: 700;
 }
 
-img {
-	border: 0;
-	height: auto;
-	max-width: 100%;
-	vertical-align: middle;
+/* =Embedded content
+-------------------------------------------------------------- */
+
+/*
+ * Responsive media.
+ */
+ 
+img,
+embed,
+object,
+video {
+    height: auto;
+    max-width: 100%;
 }
 
 figure {
-	margin: 0;
+    margin: 0;
+    padding: 0;
 }
 
-del {
-	opacity: 0.8;
-}
-
-a {
-	border-bottom: 1px solid #333;
-	color: #333;
-	text-decoration: none;
-}
-
-
-/**
- * 4.0 Alignment
- */
+/* =WordPress Core Styles
+-------------------------------------------------------------- */
 
 .alignleft {
-	float: left;
-	margin: 7px 28px 28px 0;
+    display: inline;
+    float: left;
+    margin: 0 18px 18px 0; 
 }
 
 .alignright {
-	float: right;
-	margin: 7px 0 28px 28px;
+    display: inline;
+    float: right;
+    margin: 0 0 18px 18px;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 7px auto;
+    clear: both;
+    display: block;
+    margin: 0 auto 18px auto;
 }
-
-
-/**
- * 5.0 Caption
- */
 
 .wp-caption {
-	background: transparent;
-	border: none;
-	color: #707070;
-	font-family: "Noto Sans", sans-serif;
-	margin: 0 0 28px 0;
-	max-width: 100%;
-	padding: 0;
-	text-align: inherit;
+    max-width: 100%;
 }
 
-.wp-caption.alignleft {
-	margin: 7px 28px 21px 0;
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 0 auto;
 }
 
-.wp-caption.alignright {
-	margin: 7px 0 21px 28px;
+.wp-caption-text {
+    color: #444;
+    font-size: 12px;
+    text-align: center;
 }
 
-.wp-caption.aligncenter {
-	margin: 7px auto;
+.wp-caption .wp-caption-text {
+    margin-bottom: 0.8075em; 
+    margin-top: 0.8075em;
 }
-
-.wp-caption .wp-caption-text,
-.wp-caption-dd {
-	font-size: 14px;
-	line-height: 1.5;
-	padding: 7px 0;
-}
-
-
-/**
- * 6.0 Galleries
- */
 
 .gallery-item {
-	display: inline-block;
-	padding: 1.79104477%;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+    float: left;
+    margin: 0 4px 4px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-columns-1 .gallery-item {
+    max-width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+    max-width: 48%;
+    max-width: calc(50% - 4px);
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+    max-width: 32%;
+    max-width: calc(33.3% - 4px);
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+    max-width: 23%;
+    max-width: calc(25% - 4px);
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+    max-width: 19%;
+    max-width: calc(20% - 4px);
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+    max-width: 15%;
+    max-width: calc(16.7% - 4px);
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+    max-width: 13%;
+    max-width: calc(14.28% - 4px);
 }
 
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+    max-width: 11%;
+    max-width: calc(12.5% - 4px);
 }
 
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+    max-width: 9%;
+    max-width: calc(11.1% - 4px);
 }
 
-.gallery .gallery-caption {
-	color: #707070;
-	display: block;
-	font-family: "Noto Sans", sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	padding: 7px 0;
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+    margin-right: 0;
 }
 
-.gallery-columns-6 .gallery-caption,
+.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
+.gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1) {
+    clear: left;
+}
+
+.gallery-caption {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    max-height: 50%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    padding: 6px 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.gallery-caption:before {
+    content: "";
+    height: 100%;
+    min-height: 49px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
-	display: none;
+    display: none;
 }
 
-
-/**
- * 7.0 Audio / Video
- */
-
-.mce-content-body .wpview-wrap {
-	margin-bottom: 32px;
-}
-
-.mce-content-body .wp-audio-playlist {
-	margin: 0;
-}
-
-
-/**
- * 8.0 RTL
- */
-
-body.rtl {
-	font-family: Arial, Tahoma, sans-serif;
-}
-
-.rtl blockquote {
-	border-left: none;
-	border-right: 4px solid #707070;
-	margin: 0 -21px 35px 0;
-	padding-left: 0;
-	padding-right: 17px;
-}
-
-.rtl blockquote > blockquote {
-	margin-left: auto;
-	margin-right: 0;
-}
-
-.rtl li > ul,
-.rtl li > ol {
-	margin: 0 23px 0 0;
-}
-
-.rtl table th,
-.rtl table caption {
-	text-align: right;
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
 }
